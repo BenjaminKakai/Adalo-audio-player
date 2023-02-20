@@ -1,0 +1,62 @@
+{
+  "name": "@adalo/audio-player",
+  "version": "1.4.48",
+  "license": "MIT",
+  "author": "Adalo",
+  "main": "index.js",
+  "description": "Play any audio file stored in Adalo or via external URL. Great for music, podcasts, etc.",
+  "scripts": {
+    "start": "adalo dev",
+    "build": "adalo build",
+    "login": "adalo login",
+    "publish": "adalo publish",
+    "publish:local": "REGISTRY_URL=http://localhost:8000 yarn run publish",
+    "start:local": "ADALO_DEV_SERVER=http://localhost:3035 yarn start",
+    "login:local": "ADALO_BACKEND_SERVER=http://localhost:8084 yarn run login",
+    "deploy": "adalo deploy",
+    "deploy:local": "REGISTRY_URL=http://localhost:8000 yarn run deploy"
+  },
+  "peerDependencies": {},
+  "adalo": {
+    "logo": "./logo.png",
+    "displayName": "Audio Player",
+    "components": [
+      {
+        "name": "AudioPlayer",
+        "manifest": "./src/components/AudioPlayer/manifest.json"
+      }
+    ],
+    "iosInstallScript": "./scripts/install_ios.sh",
+    "androidInstallScript": "./scripts/install_android.sh"
+  },
+  "devDependencies": {
+    "@adalo/cli": "^0.0.39",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-art": "^16.3.2",
+    "react-dom": "^16.12.0",
+    "react-native-web": "AdaloHQ/react-native-web"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "@protonapp/react-native-material-ui": "^2.0.4",
+    "@ptomasroos/react-native-multi-slider": "^2.2.2",
+    "moment": "^2.26.0",
+    "react-native-swift": "^1.2.3",
+    "react-native-track-player": "^2.1.4",
+    "react-native-vector-icons": "^6.6.0",
+    "uuid": "^3.0.0"
+  }
+}
